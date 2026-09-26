@@ -1,51 +1,22 @@
-# Attribution & Acknowledgments
+# Attribution
 
-## Original Project
+## Artwork
 
-**Capitaine Cursors** was created by [Keefer Rourke](https://krourke.org)
+**Capitaine Cursors** by [Keefer Rourke](https://krourke.org) and contributors.
 
-- GitHub: [keeferrourke/capitaine-cursors](https://github.com/keeferrourke/capitaine-cursors)
-- License: GNU Lesser General Public License (LGPL) v3
-- Based on: [KDE Breeze](https://github.com/KDE/breeze) icon theme
+- Source: [keeferrourke/capitaine-cursors](https://github.com/keeferrourke/capitaine-cursors), SVGs vendored from commit `06c8843` in [`src/svg`](src/svg)
+- Based on the [KDE Breeze](https://invent.kde.org/plasma/breeze) cursor theme
+- License: GNU LGPL v3.0 or later
 
-## Windows 11 HiDPI Adaptation
+## Windows adaptation
 
-This adaptation maintains the original design and licensing while optimizing for Windows 11 high-DPI display support.
+By [hervad](https://github.com/hervad). Released under the same license.
 
-**Changes made:**
-- Generated multi-resolution cursor assets (x1, x1.25, x1.5, x2, x2.5, x3, x4 scales)
-- Created Windows Registry installer scripts for automated installation
-- Added comprehensive Windows 11 installation documentation
-- Packaged for easy distribution on Windows
+- `build.py` renders the SVGs at the sizes Windows actually requests, from 32 to 256 px, and assembles multi-size `.cur` and `.ani` files
+- The pen cursor's hotspot is moved to the pencil tip
+- Generated `install.inf` files add install and uninstall support for both variants
+- Windows-specific documentation
 
 ## License
 
-Both the original and adapted works are licensed under:
-
-**GNU Lesser General Public License (LGPL) v3 or later**
-
-You are free to:
-- Use these cursors
-- Modify and improve them
-- Redistribute them
-
-**Provided that you:**
-- Include the original license (LGPL v3)
-- Attribute the original authors
-- License your modifications under the same license
-
-See [COPYING](COPYING) for the full license text.
-
-## Companion Projects
-
-- **La Capitaine Icon Theme** by Keefer Rourke — Companion icon set
-- **KDE Breeze** — The icon design foundation
-
-## Contributors
-
-Original design: Keefer Rourke and contributors to Capitaine Cursors  
-Windows 11 HiDPI Adaptation: hermanvadym
-
----
-
-This project is a derivative work maintaining the spirit and quality of the original Capitaine Cursors while bringing sharp, blur-free cursor support to modern Windows displays.
+The artwork and this adaptation are both licensed under the **GNU Lesser General Public License v3.0 or later**. You may use, modify and redistribute them, provided you keep the license and credits and license your changes under the same terms. The full text is in [COPYING](COPYING).

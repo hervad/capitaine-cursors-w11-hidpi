@@ -1,18 +1,27 @@
-; Right click on this file in Windows Explorer and select "Install".
-; Then, run `main.cpl` and select the cursor theme "Capitaine HiDPI".
+; Capitaine Cursors (Light)
+; Right-click this file and select "Install" (asks for administrator rights),
+; then choose the scheme in main.cpl > Pointers.
+; Uninstall: rundll32.exe setupapi.dll,InstallHinfSection DefaultUninstall 132 <path to this file>
 
 [Version]
-Signature = "$CHICAGO$"
+Signature = "$Windows NT$"
 
 [DefaultInstall]
 CopyFiles = Scheme.Cur
 AddReg    = Scheme.Reg
 
+[DefaultUninstall]
+DelFiles  = Scheme.Cur
+DelReg    = Scheme.DelReg
+
 [DestinationDirs]
 Scheme.Cur = 10,"%CUR_DIR%"
 
 [Scheme.Reg]
-HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Control Panel\Cursors\Schemes","%SCHEME_NAME%",,"%10%\%CUR_DIR%\%arrow%,%10%\%CUR_DIR%\%help%,%10%\%CUR_DIR%\%working%,%10%\%CUR_DIR%\%wait%,%10%\%CUR_DIR%\%crosshair%,%10%\%CUR_DIR%\%text%,%10%\%CUR_DIR%\%pen%,%10%\%CUR_DIR%\%unavailable%,%10%\%CUR_DIR%\%size_ns%,%10%\%CUR_DIR%\%size_ew%,%10%\%CUR_DIR%\%size_nwse%,%10%\%CUR_DIR%\%size_nesw%,%10%\%CUR_DIR%\%move%,%10%\%CUR_DIR%\%up_arrow%,%10%\%CUR_DIR%\%link%,,"
+HKLM,"%SCHEMES_KEY%","%SCHEME_NAME%",,"%10%\%CUR_DIR%\arrow.cur,%10%\%CUR_DIR%\help.cur,%10%\%CUR_DIR%\working.ani,%10%\%CUR_DIR%\wait.ani,%10%\%CUR_DIR%\crosshair.cur,%10%\%CUR_DIR%\text.cur,%10%\%CUR_DIR%\pen.cur,%10%\%CUR_DIR%\unavailable.cur,%10%\%CUR_DIR%\size_ns.cur,%10%\%CUR_DIR%\size_ew.cur,%10%\%CUR_DIR%\size_nwse.cur,%10%\%CUR_DIR%\size_nesw.cur,%10%\%CUR_DIR%\move.cur,%10%\%CUR_DIR%\up_arrow.cur,%10%\%CUR_DIR%\link.cur,,"
+
+[Scheme.DelReg]
+HKLM,"%SCHEMES_KEY%","%SCHEME_NAME%"
 
 [Scheme.Cur]
 arrow.cur
@@ -32,20 +41,6 @@ up_arrow.cur
 link.cur
 
 [Strings]
-CUR_DIR = "Cursors\Capitaine HiDPI"
-SCHEME_NAME = "Capitaine HiDPI"
-arrow = "arrow.cur"
-help = "help.cur"
-working = "working.ani"
-wait = "wait.ani"
-crosshair = "crosshair.cur"
-text = "text.cur"
-pen = "pen.cur"
-unavailable = "unavailable.cur"
-size_ns = "size_ns.cur"
-size_ew = "size_ew.cur"
-size_nwse = "size_nwse.cur"
-size_nesw = "size_nesw.cur"
-move = "move.cur"
-up_arrow = "up_arrow.cur"
-link = "link.cur"
+SCHEMES_KEY = "SOFTWARE\Microsoft\Windows\CurrentVersion\Control Panel\Cursors\Schemes"
+CUR_DIR     = "Cursors\Capitaine Cursors (Light)"
+SCHEME_NAME = "Capitaine Cursors (Light)"

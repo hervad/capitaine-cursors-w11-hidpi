@@ -1,219 +1,81 @@
-# Capitaine Cursors for Windows 11 (HiDPI Optimized)
+<div align="center">
 
-[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](./COPYING)
-[![Windows 11](https://img.shields.io/badge/Windows-11-0078D4.svg)](https://www.microsoft.com/windows/windows-11)
-[![HiDPI Support](https://img.shields.io/badge/HiDPI-7%20Scales-green.svg)](./TECHNICAL.md)
-[![Cursor Variants](https://img.shields.io/badge/Variants-Light%20%7C%20Dark-orange.svg)](./README.md#-themes--variants)
+# Capitaine Cursors for Windows
 
-**Stop blurry cursors on Windows 11.** Sharp, pixel-perfect cursors optimized for high-resolution displays, ultrawide monitors, and scaled laptops.
+**Crisp, macOS-inspired cursors for Windows 10 and 11, rendered natively for every display scale.**
 
-This is a professional adaptation of [**Capitaine Cursors**](https://github.com/keeferrourke/capitaine-cursors) by Keefer Rourke, optimized for Windows 11 HiDPI displays using multi-resolution cursor layering.
+[![Download](https://img.shields.io/github/v/release/hervad/capitaine-cursors-w11-hidpi?label=download&style=flat-square&color=2ea44f)](https://github.com/hervad/capitaine-cursors-w11-hidpi/releases/latest)
+[![Windows 10 | 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=flat-square)](#install)
+[![License: LGPL-3.0-or-later](https://img.shields.io/badge/license-LGPL--3.0--or--later-blue?style=flat-square)](COPYING)
 
----
+<img src="docs/preview.png" alt="All 15 cursors: the Dark variant on a light background, and the Light variant on a dark background" width="100%">
 
-## ⚡ Quick Start (30 Seconds)
+</div>
 
-1. [**Download latest release**](../../releases/latest) → Extract ZIP
-2. Open `capitaine-light/` or `capitaine-dark/`
-3. **Right-click** `install.inf` → **Select "Install"**
-4. **Settings** → **Personalization** → **Mouse pointer** → Select **"Capitaine HiDPI"**
+## Install
 
-Done! Your cursors are now sharp at any zoom level.
+1. **Download** `capitaine-cursors-windows11.zip` from the [latest release](https://github.com/hervad/capitaine-cursors-w11-hidpi/releases/latest) and extract it.
+2. **Right-click** `install.inf` in `capitaine-dark` or `capitaine-light` and choose **Install**, then approve the administrator prompt.
+   On Windows 11, **Install** is under **Show more options**.
+3. **Apply:** press <kbd>Win</kbd>+<kbd>R</kbd>, run `main.cpl`, open the **Pointers** tab, pick the scheme and click **OK**.
 
-**Quick links:** [📖 Full Guide](INSTALL.md) • [🔧 Technical Details](TECHNICAL.md)
+That's it. Having trouble, or upgrading from 1.0? See the [installation guide](INSTALL.md).
 
----
+## Pick a variant
 
-## 👁️ Preview
+| | Dark | Light |
+| --- | --- | --- |
+| **Look** | Black pointer, white outline | White pointer, black outline |
+| **Scheme name** | Capitaine Cursors (Dark) | Capitaine Cursors (Light) |
+| **Folder** | `capitaine-dark` | `capitaine-light` |
 
-### Light Variant
-![Capitaine Cursors Light](https://raw.githubusercontent.com/keeferrourke/capitaine-cursors/master/preview-light.png)
+Both are outlined, so either one stays visible on any background. Install both and switch whenever you like.
 
-### Dark Variant
-![Capitaine Cursors Dark](https://raw.githubusercontent.com/keeferrourke/capitaine-cursors/master/preview-dark.png)
+## Why they stay sharp
 
-*Preview images from the original [Capitaine Cursors](https://github.com/keeferrourke/capitaine-cursors) project.*
+Windows doesn't scale cursors smoothly. It picks a cursor size in steps from your display scale, then multiplies it by the pointer size in **Settings › Accessibility › Mouse pointer and touch**. If a cursor file doesn't contain that exact size, Windows resamples the nearest one, and resampling blurs.
 
----
+Every cursor here is rendered from the original vector artwork at the exact sizes Windows asks for:
 
-## ❌ The Problem: Blurry Cursors on Windows 11
+| Display scale | Pointer size 1 | Size 2 | Size 3 |
+| --- | :-: | :-: | :-: |
+| 100–149% | 32 px | 48 px | 64 px |
+| 150–199% | 48 px | 72 px | 96 px |
+| 200–299% | 64 px | 96 px | 128 px |
+| 300–399% | 96 px | 144 px | 192 px |
+| 400%+ | 128 px | 192 px | 256 px |
 
-Standard cursor files contain only a single **32×32 pixel** image. On Windows 11 with:
-- **4K monitors** or high-resolution displays (2K, ultrawide)
-- **Display scaling** (125%, 150%, 200%, 250%)
-- **High DPI laptops** (4K MacBook-equivalent displays)
+Every size in the table is exact for static cursors. The two animated cursors (busy and working) are exact for pointer sizes 1 and 3. At size 2 they use the next larger image, scaled down slightly. Larger pointer sizes use the next larger image, up to Windows' 256 px maximum.
 
-Windows must stretch and interpolate this small image, causing **blurriness and pixelation**.
+**No performance cost.** Windows decodes only the image it displays. A cursor loads in about 1 ms and an animated cursor in about 8 ms, the same as before. Each file is also test-loaded with the Windows cursor loader at every size during the build.
 
-**This affects:**
-- ❌ 4K monitor users
-- ❌ Gaming laptop owners with high-refresh displays
-- ❌ Users with display scaling enabled
-- ❌ Ultrawide monitor enthusiasts
-- ❌ Anyone seeking accessibility (blurry icons are hard to see)
+## What's included
 
----
+- **15 cursors:** normal, help, working in background, busy, precision, text, handwriting, unavailable, 4 resize directions, move, alternate and link. Busy and working are animated, with 24 frames at 30 fps.
+- Every hotspot is placed on the tip or center at every size.
+- An `install.inf` for each variant, with uninstall support.
 
-## ✅ The Solution: Multi-Resolution HiDPI Cursors
+## Uninstall
 
-These cursors contain **7 embedded resolution layers** (32px to 128px) inside each file. Windows 11 automatically selects the exact resolution matching your display scaling—**no stretching, no blurriness**.
+In **main.cpl › Pointers**, switch to another scheme first. Then run this from an administrator terminal, using the path to the `install.inf` you installed:
 
-```
-Standard cursor:      cursor.cur (32×32) → Windows stretches → BLURRY ❌
-
-This project:         cursor.cur contains 7 layers:
-                      ├─ 32×32 px  (100% scaling)
-                      ├─ 40×40 px  (125% scaling)
-                      ├─ 48×48 px  (150% scaling)  ← Windows picks this at 150%
-                      ├─ 64×64 px  (200% scaling)
-                      ├─ 80×80 px  (250% scaling)
-                      ├─ 96×96 px  (300% scaling)
-                      └─ 128×128 px (400% scaling)
-                      
-Result:               No scaling needed → PIXEL-PERFECT ✅
+```powershell
+rundll32.exe setupapi.dll,InstallHinfSection DefaultUninstall 132 C:\path\to\capitaine-dark\install.inf
 ```
 
-**See [TECHNICAL.md](TECHNICAL.md) for complete technical explanation.**
+## Build from source
 
----
+The cursors are generated from the SVGs in [`src/svg`](src/svg) by [`build.py`](build.py) (Python 3.10+):
 
-## 🎯 Why This Project?
+```powershell
+python -m pip install -r requirements.txt
+python build.py
+```
 
-| Feature | Standard Cursors | This Project |
-|---------|---|---|
-| **Sharpness at 150% scale** | ❌ Blurry/pixelated | ✅ Crystal clear |
-| **4K display support** | ❌ Blurry appearance | ✅ Perfect rendering |
-| **Ultrawide support** | ❌ Blurry stretching | ✅ Sharp at any ratio |
-| **Installation** | Manual registry hacking | ✅ One right-click (install.inf) |
-| **Variants** | Limited options | ✅ Light + Dark |
-| **Open source** | Varies | ✅ LGPL v3 licensed |
-| **Based on** | Unknown origin | ✅ KDE Breeze (via Capitaine Cursors) |
+This rebuilds both variant folders, the release zip and `docs/preview.png`. [TECHNICAL.md](TECHNICAL.md) explains how the size ladder, hotspots and animation limits were chosen.
 
----
+## Credits
 
-## 📦 What's Included
+The artwork is [Capitaine Cursors](https://github.com/keeferrourke/capitaine-cursors) by [Keefer Rourke](https://krourke.org) and contributors, based on [KDE Breeze](https://invent.kde.org/plasma/breeze). This project packages it for Windows. See [ATTRIBUTION.md](ATTRIBUTION.md).
 
-✅ **2 Cursor Themes**
-- Light variant (white strokes for dark backgrounds)
-- Dark variant (black strokes for light backgrounds)
-
-✅ **7 Resolution Scales** (32px to 128px)
-- Supports display scaling: 100%, 125%, 150%, 200%, 250%, 300%, 400%
-
-✅ **17+ Cursor Types**
-- Standard pointer, text, help, link, move, resize (8 directions)
-- Animated cursors (progress, working/busy)
-- Complete Windows cursor coverage
-
-✅ **Complete Documentation**
-- Installation guide with troubleshooting
-- Technical deep-dive on HiDPI architecture
-
-✅ **Easy Installation**
-- `install.inf` for automatic Windows Registry integration
-- No scripts to run, no administrator hassle
-- One right-click: "Install"
-
-**Repository size:** 38 files • **Package size:** ~2 MB
-
----
-
-## 💻 System Requirements & Compatibility
-
-| OS | Status | Notes |
-|---|---|---|
-| **Windows 11** | ✅ **FULLY SUPPORTED** | Optimized; all HiDPI layers utilized |
-| **Windows 10** | ⚠️ Works | Partial support; may not use all layers |
-| **Windows 8/8.1** | ❓ Untested | Compatibility unknown |
-| **Windows 7** | ❌ Not compatible | Cursor format incompatible |
-
-**Display scaling supported:** 100%, 125%, 150%, 200%, 250%, 300%, 400%
-
----
-
-## 📥 Installation
-
-### Method 1: Automatic Install (Recommended)
-
-1. [Download latest release](../../releases/latest)
-2. Extract the ZIP archive
-3. Open `capitaine-light/` or `capitaine-dark/`
-4. **Right-click** `install.inf` → **Select "Install"**
-5. **Settings** → **Personalization** → **Mouse pointer** → Select **"Capitaine HiDPI"**
-
-### Method 2: Manual Installation
-
-1. Extract ZIP
-2. Press `Win + R` → Type `%AppData%\CursorSchemes` → Enter
-3. Copy `capitaine-light` or `capitaine-dark` folder into CursorSchemes
-4. **Settings** → **Personalization** → **Mouse pointer** → Select **"Capitaine HiDPI"**
-
-**[See INSTALL.md](INSTALL.md) for troubleshooting, uninstalling, and advanced options.**
-
----
-
-## 🎨 Themes & Variants
-
-### Light Variant (Recommended for Dark Backgrounds)
-- Thin, elegant white/light strokes
-- High contrast on dark wallpapers
-- Professional, macOS-like appearance
-- Great for dark Windows themes and IDEs
-
-### Dark Variant (Recommended for Light Backgrounds)
-- Thicker, bolder black/dark strokes
-
----
-
-## 📚 Learn More
-
-- **[Installation Guide](INSTALL.md)** — Complete installation instructions + troubleshooting
-- **[Technical Deep Dive](TECHNICAL.md)** — How the HiDPI fix works under the hood
-
----
-
-## 🏆 Credits
-
-An adaptation of [**Capitaine Cursors**](https://github.com/keeferrourke/capitaine-cursors) by [Keefer Rourke](https://krourke.org), originally based on [KDE Breeze](https://github.com/KDE/breeze).
-
-**What this project adds:**
-- ✅ Multi-resolution HiDPI cursor layers
-- ✅ Windows 11 optimization and testing
-- ✅ Automatic installation via `install.inf`
-- ✅ Comprehensive Windows documentation
-
----
-
-## 📜 License
-
-Licensed under **GNU Lesser General Public License (LGPL) v3 or later**
-
-**You can:**
-- Use freely for personal or commercial use
-- Modify and improve
-- Redistribute your changes
-
-**You must:**
-- Include the LGPL v3 license
-- Attribute original Capitaine Cursors authors
-- License modifications under the same license
-
-See [COPYING](COPYING) for full text.
-
----
-
-## 💬 Support & Feedback
-
-- **Report issues:** [GitHub Issues](../../issues)
-- **Suggest improvements:** [GitHub Discussions](../../discussions) (enable in repo)
-- **Original project:** [keeferrourke/capitaine-cursors](https://github.com/keeferrourke/capitaine-cursors)
-
----
-
-## 🔗 Related Projects
-
-- [**Capitaine Cursors**](https://github.com/keeferrourke/capitaine-cursors) — Original X11/Linux cursor theme
-- [**KDE Breeze**](https://github.com/KDE/breeze) — Icon design foundation
-- [**La Capitaine Icons**](https://github.com/keeferrourke/la-capitaine-icon-theme) — Companion icon theme
-
-
+Licensed under the [GNU LGPL v3.0 or later](COPYING).

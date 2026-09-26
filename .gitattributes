@@ -1,0 +1,6 @@
+* text=auto
+*.inf text eol=crlf
+*.cur binary
+*.ani binary
+*.zip binary
+*.png binary
