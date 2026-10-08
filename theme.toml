@@ -7,7 +7,7 @@ schema = 1
 [theme]
 slug        = "capitaine"
 name        = "Capitaine Cursors"
-version     = "3.0.0"
+version     = "3.1.0"
 license     = "LGPL-3.0-or-later"
 porter      = "Keefer Rourke and contributors"
 description = "Capitaine cursors, dark and light"
@@ -29,15 +29,15 @@ renderer      = "resvg"                 # as v2's build.py
 design_canvas = 24                      # the SVGs are drawn on a 24-unit grid (Linux Xcursor nominal size)
 hotspot_mode  = "pixel"                 # the pixel that CONTAINS the point (floor), as v2's build.py
 
-# Scheme names unchanged from v2, so installs keep their names and folders.
+# Since 3.1 the "... W11 HiDPI" naming of the other themes; 2.0-3.0 used "Capitaine Cursors (Dark|Light)" (INSTALL.md).
 [[variants]]
 id          = "dark"
-scheme_name = "Capitaine Cursors (Dark)"
+scheme_name = "Capitaine Dark W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 
 [[variants]]
 id          = "light"
-scheme_name = "Capitaine Cursors (Light)"
+scheme_name = "Capitaine Light W11 HiDPI"
 svg_dir     = "upstream/src/svg/light"
 
 # Roles, files and hotspots exactly as v2's build.py ROLES (24-unit grid). Animation: 24 frames x 2 jiffies.

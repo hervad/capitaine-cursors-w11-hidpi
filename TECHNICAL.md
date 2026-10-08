@@ -82,7 +82,8 @@ the same limit before it was measured.
 ## Installer
 
 The toolkit writes `install.inf` and `uninstall.cmd`. **Install** copies the files to
-`%WINDIR%\Cursors\Capitaine Cursors (<Variant>)` (the same folder as 2.0), registers the scheme for the current user
+`%WINDIR%\Cursors\Capitaine <Variant> W11 HiDPI` (since 3.1; 2.0-3.0 used *Capitaine Cursors (<Variant>)*), registers the
+scheme for the current user
 under `HKCU\Control Panel\Cursors\Schemes`, applies it and opens Mouse Properties. **Uninstall** removes the scheme entry
 and opens Mouse Properties; the folder is deleted by hand. 2.0 registered its schemes for all users under `HKLM` and
 didn't apply them; INSTALL.md shows how to remove those before upgrading.
