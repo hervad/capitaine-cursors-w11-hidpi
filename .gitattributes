@@ -1,6 +1,4 @@
-* text=auto
-*.inf text eol=crlf
-*.cur binary
-*.ani binary
-*.zip binary
+* text=auto eol=lf
+# Licence text must stay byte-identical to upstream.
+COPYING -text
 *.png binary

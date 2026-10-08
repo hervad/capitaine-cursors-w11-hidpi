@@ -1,0 +1,114 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# theme.toml - the ONLY build input of this repo. Read by `w11cursor` (w11-cursor-toolkit).
+#   w11cursor build theme.toml && w11cursor validate theme.toml
+# ─────────────────────────────────────────────────────────────────────────────
+schema = 1
+
+[theme]
+slug        = "capitaine"
+name        = "Capitaine Cursors"
+version     = "3.0.0"
+license     = "LGPL-3.0-or-later"
+porter      = "Keefer Rourke and contributors"
+description = "Capitaine cursors, dark and light"
+
+[upstream]
+kind    = "git"
+url     = "https://github.com/keeferrourke/capitaine-cursors"
+ref     = "06c88433662a4004cf56a6e471b523a0a8880be0"   # latest commit (2021-03-03); v2 vendored the same SVGs
+path    = "upstream"
+authors = ["Keefer Rourke and contributors"]
+license = "LGPL-3.0-or-later (upstream COPYING); based on KDE Breeze"
+
+[sizes]
+animated = [32, 48, 64, 72, 80, 96, 120, 128, 144, 192, 256]   # toolkit default + v2's 192/256: nothing v2 had is lost
+ani_budget_bytes = 1_800_000   # busy 1.68 MB (maintainer, 2026-10-08); loader offset max 57,822 of 65,535
+
+[render]
+renderer      = "resvg"                 # as v2's build.py
+design_canvas = 24                      # the SVGs are drawn on a 24-unit grid (Linux Xcursor nominal size)
+hotspot_mode  = "pixel"                 # the pixel that CONTAINS the point (floor), as v2's build.py
+
+# Scheme names unchanged from v2, so installs keep their names and folders.
+[[variants]]
+id          = "dark"
+scheme_name = "Capitaine Cursors (Dark)"
+svg_dir     = "upstream/src/svg/dark"
+
+[[variants]]
+id          = "light"
+scheme_name = "Capitaine Cursors (Light)"
+svg_dir     = "upstream/src/svg/light"
+
+# Roles, files and hotspots exactly as v2's build.py ROLES (24-unit grid). Animation: 24 frames x 2 jiffies.
+[cursors.arrow]
+svg = "default.svg"
+hotspot = [4, 2]
+
+[cursors.help]
+svg = "help.svg"
+hotspot = [4, 2]
+
+[cursors.working]
+frames = "progress-{n:02d}.svg"
+frame_count = 24
+frame_start = 0
+delay = 2
+hotspot = [4, 2]
+
+[cursors.busy]
+frames = "wait-{n:02d}.svg"
+frame_count = 24
+frame_start = 0
+delay = 2
+hotspot = [12, 12]
+
+[cursors.precision]
+svg = "crosshair.svg"
+hotspot = [12, 12]
+
+[cursors.text]
+svg = "text.svg"
+hotspot = [12, 12]
+
+[cursors.handwriting]   # pencil tip, not upstream's (4, 4)
+svg = "pencil.svg"
+hotspot = [3.64, 20.68]
+
+[cursors.unavailable]
+svg = "not-allowed.svg"
+hotspot = [12, 12]
+
+[cursors.vert]
+svg = "size_ver.svg"
+hotspot = [12, 12]
+
+[cursors.horz]
+svg = "size_hor.svg"
+hotspot = [12, 12]
+
+[cursors.dgn1]
+svg = "size_fdiag.svg"
+hotspot = [12, 12]
+
+[cursors.dgn2]
+svg = "size_bdiag.svg"
+hotspot = [12, 12]
+
+[cursors.move]
+svg = "fleur.svg"
+hotspot = [12, 12]
+
+[cursors.alternate]
+svg = "up-arrow.svg"
+hotspot = [12, 4]
+
+[cursors.link]
+svg = "pointer.svg"
+hotspot = [12, 6]
+
+[cursors.pin]            # new in v3: v2 left Pin and Person empty
+same_as = "link"
+
+[cursors.person]
+same_as = "link"

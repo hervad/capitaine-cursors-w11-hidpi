@@ -1,5 +1,3 @@
-SPDX-License-Identifier: LGPL-3.0-or-later
-
 Copyright (c) 2016 Keefer Rourke <keefer.rourke@gmail.com> and others.
 Capitaine cursors are based on the KDE Breeze icon theme.
 
@@ -209,10 +207,3 @@ whether future versions of the GNU Lesser General Public License shall
 apply, that proxy's public statement of acceptance of any version is
 permanent authorization for you to choose that version for the
 Library.
-
------
-WINDOWS ADAPTATION
-
-The Windows cursor build (build.py, install.inf files and generated .cur/.ani
-files) is (c) 2026 hervad and distributed under the same license.
-Source: https://github.com/hervad/capitaine-cursors-w11-hidpi
