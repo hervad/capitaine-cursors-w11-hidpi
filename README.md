@@ -22,7 +22,8 @@ picks for your display scale and pointer size. Dark and Light variants.**
 3. **Apply:** Mouse Properties may open by itself; if it doesn't, press <kbd>Win</kbd>+<kbd>R</kbd> and run `main.cpl`.
    On the **Pointers** tab, pick the scheme and click **OK**.
 
-**Upgrading from 2.0 or 1.0?** Remove the old version first, so the scheme doesn't appear twice - the
+**Upgrading from 3.0, 2.0 or 1.0?** Since 3.1 the schemes are called *Capitaine Dark/Light W11 HiDPI*; remove the
+old ones so they don't stay in the list - the
 [installation guide](INSTALL.md#upgrading) has the commands.
 
 ## Pick a variant
@@ -31,7 +32,7 @@ picks for your display scale and pointer size. Dark and Light variants.**
 | --- | --- | --- |
 | **Look** | Black pointer, white outline | White pointer, black outline |
 | **Zip** | `capitaine-dark-w11-hidpi-v….zip` | `capitaine-light-w11-hidpi-v….zip` |
-| **Scheme name** | Capitaine Cursors (Dark) | Capitaine Cursors (Light) |
+| **Scheme name** | Capitaine Dark W11 HiDPI | Capitaine Light W11 HiDPI |
 
 Both are outlined, so either one stays visible on any background. Install both and switch whenever you like.
 
@@ -93,7 +94,7 @@ failure blocks the release.
 3. Delete the cursor files from an administrator PowerShell, for example:
 
 ```powershell
-Remove-Item "C:\Windows\Cursors\Capitaine Cursors (Dark)" -Recurse
+Remove-Item "C:\Windows\Cursors\Capitaine Dark W11 HiDPI" -Recurse
 ```
 
 ## Build from source
