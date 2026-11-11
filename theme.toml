@@ -224,6 +224,8 @@ id          = "catppuccin-mocha"
 scheme_name = "Capitaine Catppuccin Mocha W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#cdd6f4" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#cdd6f4"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#cba6f7"                           # body (Dark artwork)
 "#3daee9" = "#89b4fa"                           # Help badge, resize dots
 "#f67400" = "#fab387"                           # Move dot
@@ -254,6 +256,8 @@ id          = "dracula"
 scheme_name = "Capitaine Dracula W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#f8f8f2" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#f8f8f2"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#ff79c6"                           # body (Dark artwork)
 "#3daee9" = "#8be9fd"                           # Help badge, resize dots
 "#f67400" = "#ffb86c"                           # Move dot
@@ -284,6 +288,8 @@ id          = "rose-pine"
 scheme_name = "Capitaine Rose Pine W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#e0def4" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#e0def4"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#ebbcba"                           # body (Dark artwork)
 "#3daee9" = "#9ccfd8"                           # Help badge, resize dots
 "#f67400" = "#f6c177"                           # Move dot
@@ -314,6 +320,8 @@ id          = "tokyo-night"
 scheme_name = "Capitaine Tokyo Night W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#c0caf5" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#c0caf5"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#7aa2f7"                           # body (Dark artwork)
 "#3daee9" = "#2ac3de"                           # Help badge, resize dots (3.2.1: was the body colour)
 "#f67400" = "#ff9e64"                           # Move dot
@@ -344,6 +352,8 @@ id          = "solarized"
 scheme_name = "Capitaine Solarized W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#fdf6e3" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#fdf6e3"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#b58900"                           # body (Dark artwork)
 "#3daee9" = "#268bd2"                           # Help badge, resize dots
 "#f67400" = "#cb4b16"                           # Move dot
@@ -374,6 +384,9 @@ id          = "blue"
 scheme_name = "Capitaine Blue W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
 'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
 'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#2196f3"                           # body (Dark artwork)
@@ -389,6 +402,9 @@ id          = "red"
 scheme_name = "Capitaine Red W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
 'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
 'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#f44336"                           # body (Dark artwork)
@@ -403,6 +419,9 @@ id          = "green"
 scheme_name = "Capitaine Green W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
 'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
 'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#4caf50"                           # body (Dark artwork)
@@ -417,6 +436,9 @@ id          = "amber"
 scheme_name = "Capitaine Amber W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
 'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
 'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#ffc107"                           # body (Dark artwork)
@@ -431,6 +453,9 @@ id          = "purple"
 scheme_name = "Capitaine Purple W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
 'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
 'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#ab47bc"                           # body (Dark artwork)
