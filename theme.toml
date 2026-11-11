@@ -536,3 +536,72 @@ same_as = "link"
 
 [cursors.person]
 same_as = "link"
+
+# ── Colour checks (toolkit v0.6.0 [[checks]], ADR-9 note 2026-11-11). `validate` samples the BUILT layer at these
+#    design-unit points (24 grid; found as solid 3x3 areas in both Dark and Light) and fails the build if a measure
+#    is missed. They would have caught every 3.2.0 slip fixed in 3.2.1.
+[[checks]]
+name = "pointer body vs outline"
+role = "arrow"
+a = [5.438, 7.688]                # body
+b = [3.656, 1.969]                # outline (2 px at 64, so measured at 128)
+size = 128
+min_contrast = 3
+
+[[checks]]
+name = "Unavailable disc is light"
+role = "unavailable"
+a = [9.562, 8.812]
+min_luminance = 0.4
+
+[[checks]]
+name = "Unavailable sign on its disc"
+role = "unavailable"
+a = [9.562, 8.812]                # disc
+b = [16.688, 9.562]               # sign
+min_contrast = 3
+exempt = ["gruvbox-dark", "gruvbox-light", "palenight-dark", "palenight-light"]   # sainnhe's colours: 2.74, 2.58
+
+[[checks]]
+name = "Busy rim is light (Dark artwork)"
+role = "busy"
+a = [20.438, 12.188]
+min_luminance = 0.4
+exempt = ["light", "nord-light", "gruvbox-light", "palenight-light"]   # Light artwork: black rim by design
+
+[[checks]]
+name = "Working rim is light (Dark artwork)"
+role = "working"
+a = [22.031, 16.219]
+size = 128
+min_luminance = 0.4
+exempt = ["light", "nord-light", "gruvbox-light", "palenight-light"]
+
+[[checks]]
+name = "Help ring is light (Dark artwork)"
+role = "help"
+a = [22.031, 16.219]
+size = 128
+min_luminance = 0.4
+exempt = ["light", "nord-light", "gruvbox-light", "palenight-light"]
+
+[[checks]]
+name = "resize dot differs from the arrows"
+role = "horz"
+a = [12.188, 12.188]              # dot
+b = [6.938, 12.188]               # arrow
+min_delta_e = 15
+
+[[checks]]
+name = "Move dot differs from the arrows"
+role = "move"
+a = [12.188, 12.188]
+b = [12.188, 6.188]
+min_delta_e = 15
+
+[[checks]]
+name = "Help badge differs from the pointer"
+role = "help"
+a = [15.938, 15.188]              # badge
+b = [5.438, 7.688]                # pointer body
+min_delta_e = 15

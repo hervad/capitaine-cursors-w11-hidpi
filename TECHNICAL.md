@@ -111,6 +111,12 @@ and the Help badge also had the pointer's own colour. Since 3.2.1 only the point
 
 Nord, Gruvbox and Palenight keep sainnhe's colours, including their softer signs (2.6-3.4:1).
 
+**Checked on every build.** `theme.toml` lists nine `[[checks]]` (toolkit v0.6.0) that sample the built cursors at
+fixed points and fail `validate` if a colour rule is broken: the pointer body against its outline (contrast ≥ 3:1),
+the Unavailable disc (light) and its sign (≥ 3:1), the Busy and Working rims and the Help ring (light, except in the
+Light artwork, where they are black by design), and the resize dot, Move dot and Help badge (CIEDE2000 ≥ 15 from the
+pointer). Run against the 3.2.0 files they report exactly the problems fixed in 3.2.1.
+
 ## Cursor roles
 
 | Role | File (3.0) | Source SVG | Hotspot (24 grid) |
