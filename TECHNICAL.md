@@ -94,6 +94,20 @@ Catppuccin's mauve). The darker shade of each spinner colour is derived as HSL l
 **Blue, Red, Green, Amber, Purple** are Material Design colours with a dark outline and the original spinner. Each
 pointer colour has at least 3:1 contrast with its outline (WCAG's minimum for graphics).
 
+**Unavailable and the dots (fixed in 3.2.1).** In Dark's artwork the Unavailable cursor is a white disc with the red
+sign and no other outline, and the dots of the resize and Move cursors are separate small circles. 3.2.0 turned the
+white outline dark for the ten palette and colour variants, which also turned that disc dark (on a dark page only the
+red sign showed), and in Tokyo Night and Blue the resize dots and the Help badge had the pointer's own colour. Since
+3.2.1:
+- the **Unavailable disc stays light** (a rule anchored on that circle only): the palette's light text colour, white
+  for Blue/Red/Green/Amber/Purple. Their Unavailable is therefore Capitaine Dark's own, the same in all five. Where the
+  palette's red was too pale on the light disc, the sign uses the same palette's darker red (Catppuccin Latte, Dracula
+  Alucard, Rosé Pine Dawn, Tokyo Night `#914c54`): every sign has at least 3:1 contrast with its disc;
+- **dots and badges differ from the pointer:** Tokyo Night uses its cyan `blue1`, Blue's Help badge is orange, and
+  Blue/Red/Green/Amber/Purple have white resize and Move dots. Every dot is at least CIEDE2000 15 from its pointer.
+
+Nord, Gruvbox and Palenight keep sainnhe's colours, including their softer signs (2.6-3.4:1).
+
 ## Cursor roles
 
 | Role | File (3.0) | Source SVG | Hotspot (24 grid) |

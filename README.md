@@ -43,7 +43,7 @@ shows the schemes in this order.
 | **Rose Pine** | `capitaine-rose-pine-w11-hidpi` | Rose pointer, Rosé Pine outline and accents |
 | **Tokyo Night** | `capitaine-tokyo-night-w11-hidpi` | Blue pointer, Tokyo Night outline and accents |
 | **Solarized** | `capitaine-solarized-w11-hidpi` | Yellow pointer, Solarized outline and accents |
-| **Blue**, **Red**, **Green**, **Amber**, **Purple** | `capitaine-blue-w11-hidpi`, `…-red-…`, `…-green-…`, `…-amber-…`, `…-purple-…` | Coloured pointer, dark outline, original spinner |
+| **Blue**, **Red**, **Green**, **Amber**, **Purple** | `capitaine-blue-w11-hidpi`, `…-red-…`, `…-green-…`, `…-amber-…`, `…-purple-…` | Coloured pointer, dark outline, white dots, original spinner |
 
 - **Nord, Gruvbox and Palenight** use the colours of
   [sainnhe's Capitaine fork](https://github.com/sainnhe/capitaine-cursors) (release r5), outline included.
