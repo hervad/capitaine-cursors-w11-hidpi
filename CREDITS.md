@@ -20,11 +20,14 @@ Only colour values are taken from the projects below; no files from them are inc
   no licence file; its gnome-look page is tagged LGPLv3 and it modifies the LGPL-3.0 Capitaine artwork. The palettes
   themselves: [Nord](https://github.com/nordtheme/nord) (MIT), [Gruvbox](https://github.com/morhetz/gruvbox) by Pavel
   Pertsev (MIT/X11), Palenight from Material Theme ([material.vim](https://github.com/kaicataldo/material.vim), MIT).
-- **Catppuccin Mocha:** [catppuccin/palette](https://github.com/catppuccin/palette) (MIT).
-- **Dracula:** [dracula-theme](https://github.com/dracula/dracula-theme) (MIT).
-- **Rosé Pine:** [rose-pine/palette](https://github.com/rose-pine/palette) (MIT).
+- **Catppuccin Mocha:** [catppuccin/palette](https://github.com/catppuccin/palette) (MIT); the Unavailable sign uses
+  Latte's red.
+- **Dracula:** [dracula-theme](https://github.com/dracula/dracula-theme) (MIT); the Unavailable sign uses Alucard's
+  red.
+- **Rosé Pine:** [rose-pine/palette](https://github.com/rose-pine/palette) (MIT); the Unavailable sign uses Dawn's
+  love.
 - **Tokyo Night:** the Night palette as in [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
-  (Apache-2.0).
+  (Apache-2.0), including its `git.delete` red for the Unavailable sign.
 - **Solarized:** [Solarized](https://github.com/altercation/solarized) by Ethan Schoonover (MIT).
 - **Blue, Red, Green, Amber, Purple:** the Material Design colour palette (Google).
 - **Ideas:** colouring the whole pointer with a palette accent follows

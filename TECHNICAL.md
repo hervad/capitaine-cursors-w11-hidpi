@@ -94,6 +94,23 @@ Catppuccin's mauve). The darker shade of each spinner colour is derived as HSL l
 **Blue, Red, Green, Amber, Purple** are Material Design colours with a dark outline and the original spinner. Each
 pointer colour has at least 3:1 contrast with its outline (WCAG's minimum for graphics).
 
+**Dark's white parts and the dots (fixed in 3.2.1).** Besides each pointer's outline, Dark's artwork has white
+*parts* in four cursors: the Unavailable disc, the Busy spinner's rim, the Working spinner's rim, and the Help badge's
+ring and "?". 3.2.0 turned the white outline dark for the ten palette and colour variants, and that rule darkened
+these parts too (a dark Unavailable disc, dark spinner rims and Help rings); in Tokyo Night and Blue the resize dots
+and the Help badge also had the pointer's own colour. Since 3.2.1 only the pointer outline turns dark:
+- the **spinner rims and the Help ring stay light** (the palette's light text colour, white for Blue/Red/Green/Amber/
+  Purple, whose Busy is therefore Capitaine Dark's own). The Help "?" is white for those five, as in Dark; the five
+  palettes keep a dark "?", because a light one is unreadable on their pastel badges (1.3-1.5:1);
+- the **Unavailable disc stays light** (a rule anchored on that circle only): the palette's light text colour, white
+  for Blue/Red/Green/Amber/Purple. Their Unavailable is therefore Capitaine Dark's own, the same in all five. Where the
+  palette's red was too pale on the light disc, the sign uses the same palette's darker red (Catppuccin Latte, Dracula
+  Alucard, Rosé Pine Dawn, Tokyo Night `#914c54`): every sign has at least 3:1 contrast with its disc;
+- **dots and badges differ from the pointer:** Tokyo Night uses its cyan `blue1`, Blue's Help badge is orange, and
+  Blue/Red/Green/Amber/Purple have white resize and Move dots. Every dot is at least CIEDE2000 15 from its pointer.
+
+Nord, Gruvbox and Palenight keep sainnhe's colours, including their softer signs (2.6-3.4:1).
+
 ## Cursor roles
 
 | Role | File (3.0) | Source SVG | Hotspot (24 grid) |

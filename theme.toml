@@ -7,7 +7,7 @@ schema = 1
 [theme]
 slug        = "capitaine"
 name        = "Capitaine Cursors"
-version     = "3.2.0"
+version     = "3.2.1"
 license     = "LGPL-3.0-or-later"
 porter      = "Keefer Rourke and contributors"
 description = "Capitaine cursors: dark, light, palette and colour variants"
@@ -224,10 +224,12 @@ id          = "catppuccin-mocha"
 scheme_name = "Capitaine Catppuccin Mocha W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#cdd6f4" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#cdd6f4"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#cba6f7"                           # body (Dark artwork)
 "#3daee9" = "#89b4fa"                           # Help badge, resize dots
 "#f67400" = "#fab387"                           # Move dot
-"#ed1515" = "#f38ba8"                           # Unavailable sign
+"#ed1515" = "#d20f39"                           # Unavailable sign (3.2.1: darker palette red, >= 3:1 on the disc)
 "#18c087" = "#94e2d5"                           # alias (not a Windows role)
 "#11d116" = "#a6e3a1"                           # copy (not a Windows role)
 "#959595" = "#6c7086"                           # spinner grey
@@ -245,6 +247,7 @@ svg_dir     = "upstream/src/svg/dark"
 "#b452cb" = "#b278f7"                           # spinner purple, shade
 "<svg " = '<svg fill="#cba6f7" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#cdd6f4"'     # Unavailable disc stays light (3.2.1): Mocha text; sign = Latte red (Mocha red on it 1.60:1)
 'fill="#fff"' = 'fill="#1e1e2e"'                # outline and white details (Dark artwork)
 
 # dracula-theme README (MIT): pink body (its purple = Catppuccin mauve, dE 5.7); spinner shade = palette colour, HSL L-9 S+5.
@@ -253,10 +256,12 @@ id          = "dracula"
 scheme_name = "Capitaine Dracula W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#f8f8f2" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#f8f8f2"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#ff79c6"                           # body (Dark artwork)
 "#3daee9" = "#8be9fd"                           # Help badge, resize dots
 "#f67400" = "#ffb86c"                           # Move dot
-"#ed1515" = "#ff5555"                           # Unavailable sign
+"#ed1515" = "#cb3a2a"                           # Unavailable sign (3.2.1: darker palette red, >= 3:1 on the disc)
 "#18c087" = "#8be9fd"                           # alias (not a Windows role)
 "#11d116" = "#50fa7b"                           # copy (not a Windows role)
 "#959595" = "#6272a4"                           # spinner grey
@@ -274,6 +279,7 @@ svg_dir     = "upstream/src/svg/dark"
 "#b452cb" = "#a264fb"                           # spinner purple, shade
 "<svg " = '<svg fill="#ff79c6" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#f8f8f2"'     # Unavailable disc stays light (3.2.1): foreground; sign = Alucard red (Dracula red 2.95:1)
 'fill="#fff"' = 'fill="#282a36"'                # outline and white details (Dark artwork)
 
 # rose-pine/palette (MIT): rose body, base outline; spinner shade = palette colour, HSL L-9 S+5.
@@ -282,10 +288,12 @@ id          = "rose-pine"
 scheme_name = "Capitaine Rose Pine W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#e0def4" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#e0def4"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#ebbcba"                           # body (Dark artwork)
 "#3daee9" = "#9ccfd8"                           # Help badge, resize dots
 "#f67400" = "#f6c177"                           # Move dot
-"#ed1515" = "#eb6f92"                           # Unavailable sign
+"#ed1515" = "#b4637a"                           # Unavailable sign (3.2.1: darker palette red, >= 3:1 on the disc)
 "#18c087" = "#31748f"                           # alias (not a Windows role)
 "#11d116" = "#9ccfd8"                           # copy (not a Windows role)
 "#959595" = "#6e6a86"                           # spinner grey
@@ -303,6 +311,7 @@ svg_dir     = "upstream/src/svg/dark"
 "#b452cb" = "#ab7fe1"                           # spinner purple, shade
 "<svg " = '<svg fill="#ebbcba" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#e0def4"'     # Unavailable disc stays light (3.2.1): text; sign = Dawn love (love 2.21:1)
 'fill="#fff"' = 'fill="#191724"'                # outline and white details (Dark artwork)
 
 # folke/tokyonight.nvim night (Apache-2.0): blue body, bg outline; spinner shade = palette colour, HSL L-9 S+5.
@@ -311,10 +320,12 @@ id          = "tokyo-night"
 scheme_name = "Capitaine Tokyo Night W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#c0caf5" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#c0caf5"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#7aa2f7"                           # body (Dark artwork)
-"#3daee9" = "#7aa2f7"                           # Help badge, resize dots
+"#3daee9" = "#2ac3de"                           # Help badge, resize dots (3.2.1: was the body colour)
 "#f67400" = "#ff9e64"                           # Move dot
-"#ed1515" = "#f7768e"                           # Unavailable sign
+"#ed1515" = "#914c54"                           # Unavailable sign (3.2.1: darker palette red, >= 3:1 on the disc)
 "#18c087" = "#73daca"                           # alias (not a Windows role)
 "#11d116" = "#9ece6a"                           # copy (not a Windows role)
 "#959595" = "#565f89"                           # spinner grey
@@ -332,6 +343,7 @@ svg_dir     = "upstream/src/svg/dark"
 "#b452cb" = "#9d6cf8"                           # spinner purple, shade
 "<svg " = '<svg fill="#7aa2f7" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#c0caf5"'     # Unavailable disc stays light (3.2.1): fg; sign = git.delete (red 1.64:1)
 'fill="#fff"' = 'fill="#1a1b26"'                # outline and white details (Dark artwork)
 
 # Solarized (MIT): yellow body, base03 outline; spinner shade = palette colour, HSL L-9 S+5.
@@ -340,6 +352,8 @@ id          = "solarized"
 scheme_name = "Capitaine Solarized W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#fdf6e3" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#fdf6e3"'   # Help badge ring + Working spinner rim stay light (3.2.1)
 "#1a1a1a" = "#b58900"                           # body (Dark artwork)
 "#3daee9" = "#268bd2"                           # Help badge, resize dots
 "#f67400" = "#cb4b16"                           # Move dot
@@ -361,6 +375,7 @@ svg_dir     = "upstream/src/svg/dark"
 "#b452cb" = "#454cbd"                           # spinner purple, shade
 "<svg " = '<svg fill="#b58900" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#fdf6e3"'     # Unavailable disc stays light (3.2.1): base3
 'fill="#fff"' = 'fill="#002b36"'                # outline and white details (Dark artwork)
 
 # Blue: Material Design #2196f3. Order matters: body first, then the outline becomes the old body colour.
@@ -369,9 +384,16 @@ id          = "blue"
 scheme_name = "Capitaine Blue W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
+'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
+'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#2196f3"                           # body (Dark artwork)
 "<svg " = '<svg fill="#2196f3" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+"#3daee9" = "#f67400"                            # Help badge (3.2.1: blue badge on blue body, dE 9.2)
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#ffffff"'     # Unavailable disc stays light (3.2.1): white, as Capitaine Dark
 'fill="#fff"' = 'fill="#1a1a1a"'                # outline and white details (Dark artwork)
 
 # Red: Material Design #f44336.
@@ -380,9 +402,15 @@ id          = "red"
 scheme_name = "Capitaine Red W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
+'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
+'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#f44336"                           # body (Dark artwork)
 "<svg " = '<svg fill="#f44336" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#ffffff"'     # Unavailable disc stays light (3.2.1): white, as Capitaine Dark
 'fill="#fff"' = 'fill="#1a1a1a"'                # outline and white details (Dark artwork)
 
 # Green: Material Design #4caf50.
@@ -391,9 +419,15 @@ id          = "green"
 scheme_name = "Capitaine Green W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
+'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
+'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#4caf50"                           # body (Dark artwork)
 "<svg " = '<svg fill="#4caf50" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#ffffff"'     # Unavailable disc stays light (3.2.1): white, as Capitaine Dark
 'fill="#fff"' = 'fill="#1a1a1a"'                # outline and white details (Dark artwork)
 
 # Amber: Material Design #ffc107.
@@ -402,9 +436,15 @@ id          = "amber"
 scheme_name = "Capitaine Amber W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
+'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
+'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#ffc107"                           # body (Dark artwork)
 "<svg " = '<svg fill="#ffc107" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#ffffff"'     # Unavailable disc stays light (3.2.1): white, as Capitaine Dark
 'fill="#fff"' = 'fill="#1a1a1a"'                # outline and white details (Dark artwork)
 
 # Purple: Material Design #ab47bc.
@@ -413,9 +453,15 @@ id          = "purple"
 scheme_name = "Capitaine Purple W11 HiDPI"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
+'<g fill="#fff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">' = '<g fill="#ffffff" transform="matrix(.81818153 0 0 .81818153 -283.30046 -654.25924)">'   # Busy spinner rim stays light, as Dark (3.2.1)
+'cy="16.065998" fill="#fff"' = 'cy="16.065998" fill="#ffffff"'   # Help badge ring + Working spinner rim stay light (3.2.1)
+'02466-1.810942-.4269649z" fill="#fff"' = '02466-1.810942-.4269649z" fill="#ffffff"'   # Help "?" white, as Capitaine Dark (3.2.1)
+'fill="#3daee9" r="' = 'fill="#ffffff" r="'            # resize dots white (3.2.1; Material, first: anchors the dots only)
+'fill="#f67400" r="2.500001"' = 'fill="#ffffff" r="2.500001"'   # Move dot white (3.2.1)
 "#1a1a1a" = "#ab47bc"                           # body (Dark artwork)
 "<svg " = '<svg fill="#ab47bc" '                # colour for every shape without its own fill
 'filter="url(#' = 'fill="#000" filter="url(#'   # ...except the soft shadows, which stay black
+'cy="757.42456" fill="#fff"' = 'cy="757.42456" fill="#ffffff"'     # Unavailable disc stays light (3.2.1): white, as Capitaine Dark
 'fill="#fff"' = 'fill="#1a1a1a"'                # outline and white details (Dark artwork)
 
 # Roles, files and hotspots exactly as v2's build.py ROLES (24-unit grid). Animation: 24 frames x 2 jiffies.
