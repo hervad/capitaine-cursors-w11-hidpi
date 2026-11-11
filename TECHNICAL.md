@@ -6,7 +6,7 @@ How the Windows cursors are built, and the reasoning behind each choice.
 
 3.0 is built by [w11-cursor-toolkit](https://github.com/hervad/w11-cursor-toolkit), the same toolchain as the other
 `*-w11-hidpi` cursor themes, instead of this repo's own `build.py`. Everything theme-specific is in
-[`theme.toml`](theme.toml): roles, hotspots, sizes, variants. The SVGs come from upstream through the `upstream/`
+[`theme.toml`](theme.toml): roles, hotspots, sizes, variants and their colours. The SVGs come from upstream through the `upstream/`
 submodule (commit `06c8843`, upstream's latest); 2.0 vendored the same 122 files, byte-identical.
 
 **Equivalence with 2.0:** every cursor, every animation frame and every size present in both builds was compared for
@@ -41,9 +41,15 @@ measured rule asks for, such as 80 px at pointer size 4 and 72/120/144 px at 150
 ### Animation limit (measured)
 
 Windows refuses an `.ani` frame in which an image starts past byte 65,535 of the frame; the total file size doesn't
-matter (a 29 MB test file loads). Capitaine's largest image start is 57,822 bytes, so all 11 animated sizes fit. The
-files are larger than before (`busy.ani` about 1.6 MB). 2.0's explanation (frames of "about 80 KB" failing) described
-the same limit before it was measured.
+matter (a 29 MB test file loads). Dark and Light's largest image start is 57,822 bytes, so all 11 animated sizes fit.
+The files are larger than before (`busy.ani` about 1.6 MB). 2.0's explanation (frames of "about 80 KB" failing)
+described the same limit before it was measured.
+
+The colour variants compress less well, because their spinners have more colour detail. The largest image start is
+63,808 bytes (Palenight Light, 97 % of the limit); `validate` warns above 90 % and fails above the limit, and every file
+of every variant loads with the real Windows loader. The largest file is 1.81 MB (Palenight Dark `busy.ani`), so 3.2
+raises the download cap (`ani_budget_bytes`) from 1.8 to 1.85 MB. That cap only keeps downloads small; it is not a
+Windows limit.
 
 ## Rendering
 
@@ -57,6 +63,36 @@ the same limit before it was measured.
   empty space about 14 px from the tip at 24 px.
 - **Animation:** busy and working have 24 frames each at 2 jiffies (33 ms, about 30 fps, one turn every 0.8 s), close to
   upstream's 30 ms.
+
+## Colour variants (since 3.2)
+
+The 16 colour variants use the Dark or Light SVGs unchanged and replace colours as text in the SVG source before
+rendering (`recolor` in [`theme.toml`](theme.toml), applied top to bottom). The shapes, sizes, hotspots and
+animation are the same as Dark and Light, and Dark and Light themselves are byte-identical to 3.1.
+
+Capitaine uses a fixed set of colours, so each one has a role: `#1a1a1a` is the Dark body, `#fefefe` the Light body,
+`fill="#fff"` the Dark outline, `#3daee9` the help badge and resize dots, `#f67400` the move dot, `#ed1515` the
+unavailable sign, and six colour pairs plus a grey make the spinner. Two details need more than a colour swap:
+
+- **Shapes without a colour.** Light's outline and a few Dark bodies (pencil, up-arrow) have no `fill` attribute, so
+  SVG draws them black and a text replacement can't find them. The variants add a `fill` to the root `<svg>`, which
+  those shapes inherit.
+- **Shadows stay black.** The soft shadows also have no `fill`. A tinted shadow made `busy.ani` about 50 % larger
+  (blurred colour compresses badly), so the shadows get an explicit black fill.
+
+**Nord, Gruvbox, Palenight** reproduce [sainnhe's fork](https://github.com/sainnhe/capitaine-cursors) as in its
+release r5 (2022-06-06): its `patch.sh` colour maps, including the outline colour. Later commits on its master
+(darker shadows, keeping the white outline) were never released, so they aren't followed.
+
+**Catppuccin Mocha, Dracula, Rosé Pine, Tokyo Night, Solarized** colour the whole pointer with one signature colour
+of the palette, with the palette's dark base as the outline and its colours on the spinner and accents. A first draft
+used each palette's background colour for the pointer, as most palette ports do, but these backgrounds are all nearly
+black: measured with CIEDE2000 on the built files, two of them differed by ΔE 2.5, which is not visible at cursor size.
+The signature colours are chosen so that no two are closer than ΔE 15 (Dracula uses pink because its purple matches
+Catppuccin's mauve). The darker shade of each spinner colour is derived as HSL lightness −9 %, saturation +5 %.
+
+**Blue, Red, Green, Amber, Purple** are Material Design colours with a dark outline and the original spinner. Each
+pointer colour has at least 3:1 contrast with its outline (WCAG's minimum for graphics).
 
 ## Cursor roles
 

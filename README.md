@@ -3,13 +3,13 @@
 # Capitaine Cursors for Windows
 
 **macOS-inspired Capitaine cursors for Windows 11, rendered from the original vector artwork at every size Windows
-picks for your display scale and pointer size. Dark and Light variants.**
+picks for your display scale and pointer size. Dark and Light, plus 16 palette and colour variants.**
 
 [![Download](https://img.shields.io/github/v/release/hervad/capitaine-cursors-w11-hidpi?label=download&style=flat-square&color=2ea44f)](https://github.com/hervad/capitaine-cursors-w11-hidpi/releases/latest)
 [![Windows 11](https://img.shields.io/badge/Windows-11-0078D4?style=flat-square)](#install)
 [![License: LGPL-3.0-or-later](https://img.shields.io/badge/license-LGPL--3.0--or--later-blue?style=flat-square)](COPYING)
 
-<img src="docs/preview.png" alt="All 15 cursors: the Dark variant on a light background, and the Light variant on a dark background" width="100%">
+<img src="docs/preview.png" alt="All 15 cursors of each of the 18 variants, one row per variant in the order of the table below, each on the background it contrasts with" width="100%">
 
 </div>
 
@@ -28,13 +28,30 @@ old ones so they don't stay in the list - the
 
 ## Pick a variant
 
-| | Dark | Light |
-| --- | --- | --- |
-| **Look** | Black pointer, white outline | White pointer, black outline |
-| **Zip** | `capitaine-dark-w11-hidpi-v….zip` | `capitaine-light-w11-hidpi-v….zip` |
-| **Scheme name** | Capitaine Dark W11 HiDPI | Capitaine Light W11 HiDPI |
+Each variant is its own zip, `capitaine-<variant>-w11-hidpi-v….zip`, and its own scheme,
+*Capitaine &lt;Name&gt; W11 HiDPI*. The preview above shows them in this order, top to bottom;
+[this labelled sheet](docs/variants.png) shows each one on a dark and a light background.
 
-Both are outlined, so either one stays visible on any background. Install both and switch whenever you like.
+| Variant | Zip `<variant>` | Look |
+| --- | --- | --- |
+| **Dark** | `dark` | Black pointer, white outline (the original) |
+| **Light** | `light` | White pointer, black outline (the original) |
+| **Nord Dark** / **Light** | `nord-dark` / `nord-light` | [Nord](https://www.nordtheme.com) colours |
+| **Gruvbox Dark** / **Light** | `gruvbox-dark` / `gruvbox-light` | [Gruvbox](https://github.com/morhetz/gruvbox) colours |
+| **Palenight Dark** / **Light** | `palenight-dark` / `palenight-light` | Material Palenight colours |
+| **Catppuccin Mocha** | `catppuccin-mocha` | Mauve pointer, Mocha outline and accents |
+| **Dracula** | `dracula` | Pink pointer, Dracula outline and accents |
+| **Rose Pine** | `rose-pine` | Rose pointer, Rosé Pine outline and accents |
+| **Tokyo Night** | `tokyo-night` | Blue pointer, Tokyo Night outline and accents |
+| **Solarized** | `solarized` | Yellow pointer, Solarized outline and accents |
+| **Blue**, **Red**, **Green**, **Amber**, **Purple** | `blue`, `red`, `green`, `amber`, `purple` | Coloured pointer, dark outline, original spinner |
+
+- **Nord, Gruvbox and Palenight** use the colours of
+  [sainnhe's Capitaine fork](https://github.com/sainnhe/capitaine-cursors) (release r5), outline included.
+- **Catppuccin, Dracula, Rosé Pine, Tokyo Night and Solarized** colour the whole pointer with one signature colour
+  of the palette, so each looks different from the others and from Dark.
+- Every variant is outlined, so it stays visible on any background. Install as many as you like and switch in
+  `main.cpl`.
 
 ## Why they stay sharp
 
@@ -119,6 +136,7 @@ and animation limits.
 
 The artwork is [Capitaine Cursors](https://github.com/keeferrourke/capitaine-cursors) by
 [Keefer Rourke](https://krourke.org) and contributors, based on [KDE Breeze](https://invent.kde.org/plasma/breeze).
-This project packages it for Windows. See [CREDITS.md](CREDITS.md).
+The Nord, Gruvbox and Palenight colours are by [sainnhe](https://github.com/sainnhe/capitaine-cursors); the other
+palettes belong to their projects. This project packages it all for Windows. See [CREDITS.md](CREDITS.md).
 
 Licensed under the [GNU LGPL v3.0 or later](COPYING).
