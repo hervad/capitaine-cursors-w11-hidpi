@@ -53,47 +53,33 @@ Each variant is its own zip, `capitaine-<variant>-w11-hidpi-v….zip`, and its o
 - Every variant is outlined, so it stays visible on any background. Install as many as you like and switch in
   `main.cpl`.
 
-## Why they stay sharp
+## Sharp at every display scale and pointer size
 
-Windows doesn't scale cursors smoothly. It takes the pointer size from **Settings › Accessibility › Mouse pointer
-and touch** (size 1 = 32 px, each step adds 16 px), multiplies it by a factor that depends on your display scale,
-and then looks for an image of exactly that size inside the cursor file. If the file doesn't have it, Windows
-resamples the nearest one, and resampling blurs.
+Windows doesn't resize a cursor smoothly. It looks in the file for an image of one exact size, and if that size is
+missing it resamples the nearest image, which blurs. The size it wants is your **pointer size** (**Settings ›
+Accessibility › Mouse pointer and touch**: size 1 = 32 px, +16 px per step) **× a factor for your display scale**.
+Every cursor here contains each of those sizes, rendered from the vector artwork:
 
-Every cursor here contains each of those sizes, rendered from the original vector artwork, never resampled:
+| Display scale | Factor | Size 1 | 2 | 3 | 4 | 5 |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: |
+| 100–149 % | 1.0, measured | 32 | 48 | 64 | 80 | 96 |
+| 150–199 % | 1.5, measured | 48 | 72 | 96 | 120 | 144 |
+| 200–249 % | 2.0, assumed | 64 | 96 | 128 | 160 | 192 |
+| 250–299 % | 2.5, assumed | 80 | 120 | 160 | 200 | 240 |
+| 300 %+ | 3.0, assumed | 96 | 144 | 192 | 240 | 256 |
 
-| Display scale | Pointer size 1 | Size 2 | Size 3 | Size 4 | Size 5 | |
-| --- | :-: | :-: | :-: | :-: | :-: | --- |
-| 100–149 % | 32 px | 48 px | 64 px | 80 px | 96 px | measured |
-| 150–199 % | 48 px | 72 px | 96 px | 120 px | 144 px | measured |
-| 200–249 % | 64 px | 96 px | 128 px | 160 px | 192 px | assumed |
-| 250–299 % | 80 px | 120 px | 160 px | 200 px | 240 px | assumed |
-| 300 %+ | 96 px | 144 px | 192 px | 240 px | 256 px | assumed |
+Sizes in pixels; 256 is Windows' maximum. The factors were measured on Windows 11 25H2; the assumed ones continue
+the pattern.
 
-The two **measured** rows come from a size probe on Windows 11 25H2 (build 26200), where the factor is 1.0 from
-100 % to 149 % and 1.5 from 150 % to 199 %. The **assumed** rows continue that pattern; they couldn't be measured
-on the test screen, so the files simply include those sizes as well. Larger pointer sizes follow the same rule,
-up to Windows' 256 px maximum.
+- **Static cursors** contain every size in the table.
+- **Busy and working** (animated) contain every size in the two measured rows, plus 128, 192 and 256 px. Elsewhere
+  Windows resizes the nearest one.
+- **At 125 % and 175 %** some softness comes from Windows itself: it takes the 100 % or 150 % image and stretches it.
 
-- **Static cursors** are exact for every pointer size in every row.
-- **Busy and working** (animated) are exact for pointer sizes 1–5 at 100–149 % and 150–199 %, and also carry 192
-  and 256 px. Elsewhere Windows resizes the closest image.
-- **At 125 % and 175 %** some softness is normal and can't be fixed by any cursor theme: Windows uses the 100 % or
-  150 % image there and stretches it to fit.
-
-**No performance cost.** Windows decodes a cursor once, when you switch scheme or pointer size, and animation only
-flips between images it has already decoded. Measured on Windows 11 25H2 against Microsoft's own `aero` cursors
-(same machine, same run):
-
-| | Capitaine | Windows aero |
-| --- | --- | --- |
-| Load a static cursor (32–96 px) | 0.2–0.3 ms | 0.1–0.2 ms |
-| Load an animated cursor (32–96 px) | 3–5 ms | 1–4 ms |
-| Load an animated cursor (256 px) | 15 ms | 20 ms |
-| GDI / USER handles left behind after 300 loads | 0 / 0 | 0 / 0 |
-
-Before every release, GitHub Actions loads every file with the real Windows cursor loader at several sizes; a
-failure blocks the release.
+**No performance cost.** Windows decodes a cursor once, when you change scheme or size. Compared with Microsoft's
+own `aero` cursors on Windows 11 25H2, a static cursor loads in 0.2–0.3 ms (aero 0.1–0.2), an animated one in
+3–5 ms at 32–96 px (aero 1–4) and 15 ms at 256 px (aero 20), and 300 loads leave no handles behind. Before every
+release, GitHub Actions loads every file with the real Windows cursor loader; any failure blocks the release.
 
 ## What's included
 
