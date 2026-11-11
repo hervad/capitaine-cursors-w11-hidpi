@@ -9,7 +9,7 @@ picks for your display scale and pointer size. Dark and Light, plus 16 palette a
 [![Windows 11](https://img.shields.io/badge/Windows-11-0078D4?style=flat-square)](#install)
 [![License: LGPL-3.0-or-later](https://img.shields.io/badge/license-LGPL--3.0--or--later-blue?style=flat-square)](COPYING)
 
-<img src="docs/preview.png" alt="All 15 cursors of each of the 18 variants, one row per variant in the order of the table below, each on the background it contrasts with" width="100%">
+<img src="docs/variants.png" alt="All 15 cursors of each of the 18 variants, one labelled row per variant in the order of the table below, on a dark and on a light background" width="100%">
 
 </div>
 
@@ -29,8 +29,7 @@ old ones so they don't stay in the list - the
 ## Pick a variant
 
 Each variant is its own zip, `capitaine-<variant>-w11-hidpi-v….zip`, and its own scheme,
-*Capitaine &lt;Name&gt; W11 HiDPI*. The preview above shows them in this order, top to bottom;
-[this labelled sheet](docs/variants.png) shows each one on a dark and a light background.
+*Capitaine &lt;Name&gt; W11 HiDPI*. The image at the top shows them in this order.
 
 | Variant | Zip `<variant>` | Look |
 | --- | --- | --- |
