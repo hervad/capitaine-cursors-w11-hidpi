@@ -128,4 +128,4 @@ didn't apply them; INSTALL.md shows how to remove those before upgrading.
 scheme, each with its own `install.inf` and `uninstall.cmd` (`package` in [`theme.toml`](theme.toml), toolkit v0.5.0);
 the other ten schemes have a zip each, so 14 zips in total. A pair is still two schemes in Mouse Properties, because
 a Windows scheme is exactly one set of cursors. Dark and Light keep their 3.1 scheme names and folders, so upgrading
-from 3.1 needs no cleanup: installing over them replaces the files.
+from 3.1 leaves no old schemes behind to clean up.
