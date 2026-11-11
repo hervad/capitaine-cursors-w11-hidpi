@@ -34,23 +34,27 @@ hotspot_mode  = "pixel"                 # the pixel that CONTAINS the point (flo
 # ── Variants (18 schemes). Recolour = text replacement in the SVG source, applied top to bottom (toolkit
 #    apply_recolor; order matters only where noted). Colour choices and measurements: ADR-9 amendment 2026-11-11
 #    in w11-cursor-toolkit docs/DECISIONS.md. Since 3.1 the "... W11 HiDPI" naming;
-#    2.0-3.0 used "Capitaine Cursors (Dark|Light)" (INSTALL.md).
+#    2.0-3.0 used "Capitaine Cursors (Dark|Light)" (INSTALL.md). Dark + Light pairs share one zip
+#    (`package`, toolkit v0.5.0): capitaine-w11-hidpi, capitaine-nord/gruvbox/palenight-w11-hidpi.
 
 # Original artwork.
 [[variants]]
 id          = "dark"
 scheme_name = "Capitaine Dark W11 HiDPI"
+package     = "capitaine"
 svg_dir     = "upstream/src/svg/dark"
 
 [[variants]]
 id          = "light"
 scheme_name = "Capitaine Light W11 HiDPI"
+package     = "capitaine"
 svg_dir     = "upstream/src/svg/light"
 
 # Nord: sainnhe/capitaine-cursors release r5 (patch.sh + its #fff line), gnome-look p/1818760.
 [[variants]]
 id          = "nord-dark"
 scheme_name = "Capitaine Nord Dark W11 HiDPI"
+package     = "nord"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
 "#1a1a1a" = "#353b49"              # body (Dark artwork)
@@ -77,6 +81,7 @@ svg_dir     = "upstream/src/svg/dark"
 [[variants]]
 id          = "nord-light"
 scheme_name = "Capitaine Nord Light W11 HiDPI"
+package     = "nord"
 svg_dir     = "upstream/src/svg/light"
 [variants.recolor]
 "#fefefe" = "#e6ebf2"                           # body (Light artwork)
@@ -105,6 +110,7 @@ svg_dir     = "upstream/src/svg/light"
 [[variants]]
 id          = "gruvbox-dark"
 scheme_name = "Capitaine Gruvbox Dark W11 HiDPI"
+package     = "gruvbox"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
 "#1a1a1a" = "#3c3836"              # body (Dark artwork)
@@ -131,6 +137,7 @@ svg_dir     = "upstream/src/svg/dark"
 [[variants]]
 id          = "gruvbox-light"
 scheme_name = "Capitaine Gruvbox Light W11 HiDPI"
+package     = "gruvbox"
 svg_dir     = "upstream/src/svg/light"
 [variants.recolor]
 "#fefefe" = "#f2e5bc"                           # body (Light artwork)
@@ -159,6 +166,7 @@ svg_dir     = "upstream/src/svg/light"
 [[variants]]
 id          = "palenight-dark"
 scheme_name = "Capitaine Palenight Dark W11 HiDPI"
+package     = "palenight"
 svg_dir     = "upstream/src/svg/dark"
 [variants.recolor]
 "#1a1a1a" = "#3a3f58"              # body (Dark artwork)
@@ -185,6 +193,7 @@ svg_dir     = "upstream/src/svg/dark"
 [[variants]]
 id          = "palenight-light"
 scheme_name = "Capitaine Palenight Light W11 HiDPI"
+package     = "palenight"
 svg_dir     = "upstream/src/svg/light"
 [variants.recolor]
 "#fefefe" = "#e8e9f0"                           # body (Light artwork)
