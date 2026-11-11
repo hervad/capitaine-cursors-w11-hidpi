@@ -16,9 +16,9 @@ picks for your display scale and pointer size. Dark and Light, plus 16 palette a
 ## Install
 
 1. **Download** the zip for your variant from the [latest release](https://github.com/hervad/capitaine-cursors-w11-hidpi/releases/latest)
-   and extract it.
-2. **Right-click** `install.inf` in the extracted folder and choose **Install**, then approve the administrator prompt.
-   On Windows 11, **Install** is under **Show more options**.
+   and extract it. Dark + Light pairs come in one zip, with a folder for each.
+2. **Right-click** `install.inf` in the folder of the scheme you want and choose **Install**, then approve the
+   administrator prompt. On Windows 11, **Install** is under **Show more options**.
 3. **Apply:** Mouse Properties may open by itself; if it doesn't, press <kbd>Win</kbd>+<kbd>R</kbd> and run `main.cpl`.
    On the **Pointers** tab, pick the scheme and click **OK**.
 
@@ -28,22 +28,22 @@ old ones so they don't stay in the list - the
 
 ## Pick a variant
 
-Each variant is its own zip, `capitaine-<variant>-w11-hidpi-v….zip`, and its own scheme,
-*Capitaine &lt;Name&gt; W11 HiDPI*. The image at the top shows them in this order.
+There are 14 zips, `capitaine-…-w11-hidpi-v….zip`. Each folder inside installs one scheme,
+*Capitaine &lt;Name&gt; W11 HiDPI*; the four Dark + Light pairs have two folders in one zip. The image at the top
+shows the schemes in this order.
 
-| Variant | Zip `<variant>` | Look |
+| Variant | Zip | Look |
 | --- | --- | --- |
-| **Dark** | `dark` | Black pointer, white outline (the original) |
-| **Light** | `light` | White pointer, black outline (the original) |
-| **Nord Dark** / **Light** | `nord-dark` / `nord-light` | [Nord](https://www.nordtheme.com) colours |
-| **Gruvbox Dark** / **Light** | `gruvbox-dark` / `gruvbox-light` | [Gruvbox](https://github.com/morhetz/gruvbox) colours |
-| **Palenight Dark** / **Light** | `palenight-dark` / `palenight-light` | Material Palenight colours |
-| **Catppuccin Mocha** | `catppuccin-mocha` | Mauve pointer, Mocha outline and accents |
-| **Dracula** | `dracula` | Pink pointer, Dracula outline and accents |
-| **Rose Pine** | `rose-pine` | Rose pointer, Rosé Pine outline and accents |
-| **Tokyo Night** | `tokyo-night` | Blue pointer, Tokyo Night outline and accents |
-| **Solarized** | `solarized` | Yellow pointer, Solarized outline and accents |
-| **Blue**, **Red**, **Green**, **Amber**, **Purple** | `blue`, `red`, `green`, `amber`, `purple` | Coloured pointer, dark outline, original spinner |
+| **Dark** + **Light** | `capitaine-w11-hidpi` | The original: black pointer with white outline, white pointer with black outline |
+| **Nord Dark** + **Light** | `capitaine-nord-w11-hidpi` | [Nord](https://www.nordtheme.com) colours |
+| **Gruvbox Dark** + **Light** | `capitaine-gruvbox-w11-hidpi` | [Gruvbox](https://github.com/morhetz/gruvbox) colours |
+| **Palenight Dark** + **Light** | `capitaine-palenight-w11-hidpi` | Material Palenight colours |
+| **Catppuccin Mocha** | `capitaine-catppuccin-mocha-w11-hidpi` | Mauve pointer, Mocha outline and accents |
+| **Dracula** | `capitaine-dracula-w11-hidpi` | Pink pointer, Dracula outline and accents |
+| **Rose Pine** | `capitaine-rose-pine-w11-hidpi` | Rose pointer, Rosé Pine outline and accents |
+| **Tokyo Night** | `capitaine-tokyo-night-w11-hidpi` | Blue pointer, Tokyo Night outline and accents |
+| **Solarized** | `capitaine-solarized-w11-hidpi` | Yellow pointer, Solarized outline and accents |
+| **Blue**, **Red**, **Green**, **Amber**, **Purple** | `capitaine-blue-w11-hidpi`, `…-red-…`, `…-green-…`, `…-amber-…`, `…-purple-…` | Coloured pointer, dark outline, original spinner |
 
 - **Nord, Gruvbox and Palenight** use the colours of
   [sainnhe's Capitaine fork](https://github.com/sainnhe/capitaine-cursors) (release r5), outline included.
@@ -109,7 +109,7 @@ Rendering uses resvg, which the toolkit installs.
 ```powershell
 git clone --recurse-submodules https://github.com/hervad/capitaine-cursors-w11-hidpi
 cd capitaine-cursors-w11-hidpi
-python -m pip install "w11cursor @ git+https://github.com/hervad/w11-cursor-toolkit@v0.4.0"
+python -m pip install "w11cursor @ git+https://github.com/hervad/w11-cursor-toolkit@v0.5.0"
 w11cursor build    theme.toml --out dist
 w11cursor validate theme.toml --dist dist
 ```

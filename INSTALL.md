@@ -2,11 +2,12 @@
 
 ## Install
 
-1. Download the zip of your variant, for example `capitaine-dark-w11-hidpi-v….zip` or
-   `capitaine-nord-dark-w11-hidpi-v….zip`, from the
+1. Download the zip of your variant, for example `capitaine-w11-hidpi-v….zip` (Dark + Light) or
+   `capitaine-dracula-w11-hidpi-v….zip`, from the
    [latest release](https://github.com/hervad/capitaine-cursors-w11-hidpi/releases/latest) and extract it anywhere.
-   The README's [variant table](README.md#pick-a-variant) lists all 18.
-2. Open the extracted folder, for example `Capitaine Dark W11 HiDPI`.
+   The README's [variant table](README.md#pick-a-variant) lists all 14 zips.
+2. Open the folder of the scheme you want, for example `Capitaine Dark W11 HiDPI`. Dark + Light zips contain one
+   folder for each.
 3. Right-click `install.inf` and choose **Install**. On Windows 11, choose **Show more options** first.
 4. Approve the administrator prompt. The installer copies the cursors to `C:\Windows\Cursors\<scheme name>` (for
    example `Capitaine Dark W11 HiDPI`), adds the scheme for your account and applies it. Mouse Properties may open.
