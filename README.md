@@ -109,7 +109,7 @@ Rendering uses resvg, which the toolkit installs.
 ```powershell
 git clone --recurse-submodules https://github.com/hervad/capitaine-cursors-w11-hidpi
 cd capitaine-cursors-w11-hidpi
-python -m pip install "w11cursor @ git+https://github.com/hervad/w11-cursor-toolkit@v0.5.0"
+python -m pip install "w11cursor @ git+https://github.com/hervad/w11-cursor-toolkit@v0.6.0"
 w11cursor build    theme.toml --out dist
 w11cursor validate theme.toml --dist dist
 ```
