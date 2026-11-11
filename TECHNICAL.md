@@ -123,3 +123,9 @@ scheme for the current user
 under `HKCU\Control Panel\Cursors\Schemes`, applies it and opens Mouse Properties. **Uninstall** removes the scheme entry
 and opens Mouse Properties; the folder is deleted by hand. 2.0 registered its schemes for all users under `HKLM` and
 didn't apply them; INSTALL.md shows how to remove those before upgrading.
+
+**Zips (since 3.2):** each Dark + Light pair (Capitaine, Nord, Gruvbox, Palenight) ships as one zip with a folder per
+scheme, each with its own `install.inf` and `uninstall.cmd` (`package` in [`theme.toml`](theme.toml), toolkit v0.5.0);
+the other ten schemes have a zip each, so 14 zips in total. A pair is still two schemes in Mouse Properties, because
+a Windows scheme is exactly one set of cursors. Dark and Light keep their 3.1 scheme names and folders, so upgrading
+from 3.1 needs no cleanup: installing over them replaces the files.
